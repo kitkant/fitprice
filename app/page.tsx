@@ -45,7 +45,6 @@ export default function Home() {
 	}
 
 	useEffect(() => {
-		console.log('попало в эффекр')
 		gerDataTariffs()
 			.then(res => {
 				if (!res?.data?.length) return
