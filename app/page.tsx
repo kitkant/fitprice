@@ -214,6 +214,7 @@ export default function Home() {
 												setReq={setReq}
 												req={req}
 												check={req.check}
+												notGet={false}
 											/>
 										)
 									})}

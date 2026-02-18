@@ -11,6 +11,7 @@ export type TariffsCard = Tariffs & {
 	req: IReq
 	setReq: React.Dispatch<React.SetStateAction<IReq>>
 	check: boolean
+	notGet?: boolean
 }
 
 export interface IReq {

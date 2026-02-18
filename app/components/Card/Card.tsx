@@ -1,5 +1,6 @@
 import { useSharedTimer } from '@/app/layout'
 import { TariffsCard } from '@/app/type/Tariffs'
+import { useEffect } from 'react'
 
 const Card = ({
 	id,
@@ -11,8 +12,22 @@ const Card = ({
 	req,
 	setReq,
 	check,
+	notGet= true
 }: TariffsCard) => {
 	const { isExpired } = useSharedTimer()
+
+	useEffect(()=>{
+			if(!notGet && is_best)
+			{
+				if (isExpired) {
+						setReq({ id, price: full_price, check })
+					} else {
+						setReq({ id, price, check })
+					}
+			}
+
+
+	}, [])
 
 	return (
 		<div
